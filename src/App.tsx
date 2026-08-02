@@ -1,4 +1,4 @@
-import { Footer } from './Components/Footer/footer'
+import { Footer } from './Components/Footer/Footer'
 import "./App.css"
 import { Header } from './Components/Header/Header'
 import { Presentation } from './Components/Presentation/Presentation'

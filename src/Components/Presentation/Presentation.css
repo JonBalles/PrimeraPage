@@ -1,0 +1,181 @@
+.presentation{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:120px 20px 100px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.presentation__avatar{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    background:
+        linear-gradient(135deg,#38bdf8,#2563eb);
+
+    color:white;
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 0 40px rgba(56,189,248,.35);
+
+}
+
+.presentation__welcome{
+
+    color:#38bdf8;
+
+    font-size:1rem;
+
+    letter-spacing:.15rem;
+
+    text-transform:uppercase;
+
+}
+
+.presentation__title{
+
+    margin-top:12px;
+
+    font-size:clamp(2.6rem,6vw,4.6rem);
+
+    font-weight:800;
+
+    color:white;
+
+}
+
+.presentation__subtitle{
+
+    margin-top:20px;
+
+    color:#cbd5e1;
+
+    font-size:1.3rem;
+
+    font-weight:400;
+
+}
+
+.presentation__description{
+
+    max-width:700px;
+
+    margin-top:35px;
+
+    line-height:1.8;
+
+    color:#94a3b8;
+
+    font-size:1.1rem;
+
+}
+
+.presentation__buttons{
+
+    margin-top:45px;
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.button{
+
+    padding:15px 32px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.button--primary{
+
+    background:#38bdf8;
+
+    color:#0f172a;
+
+}
+
+.button--primary:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.button--secondary{
+
+    border:1px solid #38bdf8;
+
+    color:#38bdf8;
+
+}
+
+.button--secondary:hover{
+
+    background:#38bdf8;
+
+    color:#0f172a;
+
+}
+
+@media (max-width:768px){
+
+    .presentation{
+
+        padding:90px 20px 70px;
+
+    }
+
+    .presentation__avatar{
+
+        width:120px;
+
+        height:120px;
+
+        font-size:2.5rem;
+
+    }
+
+    .presentation__subtitle{
+
+        font-size:1.1rem;
+
+    }
+
+}

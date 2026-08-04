@@ -20,7 +20,7 @@ export function Contact() {
 
                 <a
                     className="contact-card"
-                    href="jonatan.a.ballestero@gmail.com"
+                    href="mailto:jonatan.a.ballestero@gmail.com"
                 >
                     <span className="contact-card__icon">📧</span>
 
@@ -44,7 +44,7 @@ export function Contact() {
 
                 <a
                     className="contact-card"
-                    href="https://linkedin.com/"
+                    href="https://www.linkedin.com/in/jonballes/"
                     target="_blank"
                     rel="noreferrer"
                 >

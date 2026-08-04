@@ -30,7 +30,7 @@ export function Footer() {
                     </a>
 
                     <a
-                        href="https://github.com/"
+                        href="https://github.com/jonballes"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -38,13 +38,19 @@ export function Footer() {
                     </a>
 
                     <a
-                        href="https://linkedin.com/"
+                        href="https://www.linkedin.com/in/jonballes/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         LinkedIn
                     </a>
-
+ <a
+                        href="mailto:jonatan.a.ballestero@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
                     <a
                         href="https://chat.whatsapp.com/FheFi72VfmfL9i11Ig1ea8"
                         target="_blank"

@@ -1,31 +1,16 @@
-import "./App.css"
-import { Header } from './Components/Header/Header'
-import { Presentation } from './Components/Presentation/Presentation'
-import { About } from './Components/About/About'
-import { Skills } from './Components/Skills/Skills'
-import { Projects } from './Components/Projects/Projects'
-import { Contact } from './Components/Contact/Contact'
-import { Footer } from "./Components/Footer/F"
-
+import { Routes, Route } from 'react-router-dom'
+import { Home } from './Pages/Home'
+import { Eden } from './Pages/Eden/Eden'
+import { ComingSoon } from './Pages/ComingSoon'
 
 function App() {
-
   return (
-    <>
-<Header />
-
-<Presentation />
-
-<About />
-
-<Skills />
-
-<Projects />
-
-<Contact />
-
-<Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/eden" element={<Eden />} />
+      <Route path="/eden/juegos" element={<ComingSoon titulo="Juegos" />} />
+      <Route path="/eden/cumples" element={<ComingSoon titulo="Cumples" />} />
+    </Routes>
   )
 }
 

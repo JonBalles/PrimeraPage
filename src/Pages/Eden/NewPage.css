@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #05050a;
+  color: white;
+}
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(71, 36, 86, 0.32),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(25, 42, 85, 0.25),
+      transparent 30%
+    ),
+    #05050a;
+
+  animation: page-entry 1.4s ease-out both;
+}
+
+/* -----------------------------
+   Luces ambientales
+----------------------------- */
+
+.ambient-light {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+  opacity: 0.15;
+
+  pointer-events: none;
+}
+
+.light-one {
+  background: #673b8f;
+  top: -250px;
+  left: -150px;
+
+  animation: floating-light 8s ease-in-out infinite alternate;
+}
+
+.light-two {
+  background: #1e467d;
+  right: -200px;
+  bottom: -250px;
+
+  animation: floating-light 10s ease-in-out infinite alternate-reverse;
+}
+
+/* -----------------------------
+   Contenedor
+----------------------------- */
+
+.eden-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(90%, 520px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* -----------------------------
+   Título
+----------------------------- */
+
+.eden-title-wrapper {
+  animation: title-entry 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.eden-title {
+  position: relative;
+
+  margin: 0;
+
+  font-family: "Cinzel", serif;
+  font-size: clamp(3.5rem, 13vw, 7rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+
+  background: linear-gradient(
+    110deg,
+    #8d6b2f,
+    #f8df8a,
+    #fff1a8,
+    #b58a3b,
+    #f4d477
+  );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: gold-shine 5s linear infinite;
+
+  filter:
+    drop-shadow(0 0 8px rgba(255, 213, 100, 0.2))
+    drop-shadow(0 0 30px rgba(255, 195, 70, 0.08));
+}
+
+/*
+  Brillo que recorre el borde visualmente.
+*/
+
+.eden-title::after {
+  content: "";
+
+  position: absolute;
+  inset: -8px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 239, 167, 0.9) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+
+  background-size: 250% 100%;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  padding: 2px;
+
+  animation: border-shine 4s linear infinite;
+
+  pointer-events: none;
+}
+
+.eden-subtitle {
+  margin-top: 14px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.8rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.eden-description {
+  margin: 40px 0 28px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.9rem;
+}
+
+/* -----------------------------
+   Botones
+----------------------------- */
+
+.eden-menu {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eden-link {
+  position: relative;
+
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: 1px solid rgba(212, 170, 72, 0.35);
+  border-radius: 10px;
+
+  color: #f5df9a;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.eden-link:hover {
+  transform: translateY(-2px);
+
+  background: rgba(212, 170, 72, 0.08);
+
+  border-color: rgba(240, 205, 115, 0.75);
+
+  box-shadow:
+    0 0 20px rgba(212, 170, 72, 0.08),
+    inset 0 0 20px rgba(212, 170, 72, 0.03);
+}
+
+.eden-link-icon {
+  font-size: 1.15rem;
+}
+
+/* -----------------------------
+   Footer
+----------------------------- */
+
+.eden-footer {
+  position: absolute;
+  bottom: 25px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* -----------------------------
+   Placeholder
+----------------------------- */
+
+.placeholder {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #05050a;
+  color: white;
+
+  text-align: center;
+}
+
+.placeholder h2 {
+  font-family: "Cinzel", serif;
+  color: #e8ca75;
+}
+
+/* -----------------------------
+   Animaciones
+----------------------------- */
+
+@keyframes page-entry {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes title-entry {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gold-shine {
+  from {
+    background-position: 250% center;
+  }
+
+  to {
+    background-position: -250% center;
+  }
+}
+
+@keyframes border-shine {
+  from {
+    background-position: 250% center;
+  }
+
+  to {
+    background-position: -250% center;
+  }
+}
+
+@keyframes floating-light {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(80px, 50px);
+  }
+}
+
+@media (max-width: 500px) {
+  .eden-title {
+    font-size: clamp(3rem, 17vw, 5rem);
+  }
+
+  .eden-description {
+    margin-top: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

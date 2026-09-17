@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
 import { supabase } from '../../lib/supabaseClient'
 import { useAuth } from '../../lib/useAuth'
-import './Eden.css'
 import './EdenForms.css'
 
 interface Solicitud {

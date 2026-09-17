@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import './Eden.css'
-
+import './OldPage.css'
 const GRUPO_URL = 'https://chat.whatsapp.com/FheFi72VfmfL9i11Ig1ea8'
 
 const entradas = [
@@ -23,10 +22,10 @@ const entradas = [
     descripcion: 'sumate a la charla',
   },
 ]
+export function OldPage (){
 
-export function Eden() {
-  return (
-    <div className="eden-page">
+    return (
+            <div className="eden-page">
       <div className="eden-terminal">
         <p className="eden-prompt">
           <span className="eden-prompt__user">jon@eden</span>
@@ -48,10 +47,10 @@ export function Eden() {
             <li key={e.ruta} className="eden-entrada">
               {e.externo ? (
                 <a
-                  href={e.to}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="eden-entrada__link"
+                href={e.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="eden-entrada__link"
                 >
                   <span className="eden-entrada__ruta">{e.ruta}</span>
                   <span className="eden-entrada__desc">{e.descripcion}</span>
@@ -75,5 +74,7 @@ export function Eden() {
         <Link to="/" className="eden-back">cd ..</Link>
       </div>
     </div>
-  )
+    )
+
+
 }

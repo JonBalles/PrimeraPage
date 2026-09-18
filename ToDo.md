@@ -1,13 +1,14 @@
 ## 🚀 Próximas Tareas
-- [ ] Arreglar rutas
-- [ ] Traer calendario real a la app
+- [ ] Arreglar rutas sin vista
+- [ ] Agregar link a Libros
+- [ ] Juegos como proyectos de JonFix. No del Eden
 - [ ] Estilizar pages de juegos
 - [ ] Empezar sistema de prestamo de libros
 
 ## ⏳ En Progreso
-- [ / ] extraer todos los datos desde el chat de GPT
-- [ / ] Combinar "home" y "eden" para tener una landing
+- [ / ] Traer calendario real a la app
+- [ / ] 
 
 ## ✅ Terminado
-- [x] 
-- [x] 
+- [x] extraer todos los datos desde el chat de GPT
+- [x] Combinar "home" y "eden" para tener una landing

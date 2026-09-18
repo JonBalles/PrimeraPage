@@ -262,6 +262,24 @@ body {
 }
 
 /* -----------------------------
+   Link de admin
+----------------------------- */
+
+.eden-admin-link {
+  margin-top: 24px;
+
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.eden-admin-link:hover {
+  color: #f5df9a;
+}
+
+/* -----------------------------
    Placeholder
 ----------------------------- */
 

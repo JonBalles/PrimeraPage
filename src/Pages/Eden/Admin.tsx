@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
 import { supabase } from '../../lib/supabaseClient'
 import { useAuth } from '../../lib/useAuth'
-import './EdenForms.css'
+import './AdminUI.css'
 
 interface Solicitud {
   id: string
@@ -75,60 +75,57 @@ export function Admin() {
 
   if (!esAdmin) {
     return (
-      <div className="eden-page">
-        <div className="eden-terminal">
-          <p className="eden-prompt">permission denied</p>
+      <div className="admin-page">
+        <div className="admin-box">
+          <p className="admin-error">No tenés permiso para ver esta página.</p>
         </div>
       </div>
     )
   }
 
   return (
-    <div className="eden-page">
-      <div className="eden-terminal">
-        <p className="eden-prompt">
-          <span className="eden-prompt__user">jon@eden</span>
-          <span className="eden-prompt__sep">:~/admin$</span> cat solicitudes_pendientes
-        </p>
+    <div className="admin-page">
+      <div className="admin-box" style={{ maxWidth: 640 }}>
+        <div className="admin-nav">
+          <Link to="/eden/admin/panel" className="admin-back">Solicitudes</Link>
+          <Link to="/eden/cumples" className="admin-back">Cumpleaños</Link>
+          <Link to="/eden/libros" className="admin-back">Libros</Link>
+          <Link to="/eden" className="admin-back">El Edén</Link>
+        </div>
 
-        {solicitudes.length === 0 && <p className="eden-intro">No hay solicitudes pendientes.</p>}
+        <h1 className="admin-title">Solicitudes pendientes</h1>
 
-        <ul className="eden-listado">
-          {solicitudes.map((s) => (
-            <li key={s.id} className="eden-entrada eden-entrada--admin">
-              <div className="eden-entrada__info">
-                <span className="eden-entrada__ruta">{s.nombre}</span>
-                <span className="eden-entrada__desc">
-                  {s.cumple_dia}/{s.cumple_mes}
-                  {s.regalo_fav ? ` — ${s.regalo_fav}` : ''}
-                  {s.solicitante_contacto ? ` · pidió: ${s.solicitante_contacto}` : ''}
-                </span>
-              </div>
+        {solicitudes.length === 0 && <p style={{ color: 'rgba(255,255,255,0.5)' }}>No hay solicitudes pendientes.</p>}
 
-              <input
-                className="eden-input eden-input--nota"
-                placeholder="nota (opcional)"
-                value={notas[s.id] ?? ''}
-                onChange={(e) => setNotas((prev) => ({ ...prev, [s.id]: e.target.value }))}
-              />
+        {solicitudes.map((s) => (
+          <div key={s.id} className="admin-entrada">
+            <div className="admin-entrada__info">
+              <span className="admin-entrada__nombre">{s.nombre}</span>
+              <span className="admin-entrada__desc">
+                {s.cumple_dia}/{s.cumple_mes}
+                {s.regalo_fav ? ` — ${s.regalo_fav}` : ''}
+                {s.solicitante_contacto ? ` · pidió: ${s.solicitante_contacto}` : ''}
+              </span>
+            </div>
 
-              <div className="eden-acciones">
-                <button className="eden-boton" disabled={procesando === s.id} onClick={() => aprobar(s)}>
-                  aprobar
-                </button>
-                <button
-                  className="eden-boton eden-boton--rechazar"
-                  disabled={procesando === s.id}
-                  onClick={() => rechazar(s)}
-                >
-                  rechazar
-                </button>
-              </div>
-            </li>
-          ))}
-        </ul>
+            <input
+              className="admin-input"
+              style={{ flex: 1, minWidth: 160 }}
+              placeholder="nota (opcional)"
+              value={notas[s.id] ?? ''}
+              onChange={(e) => setNotas((prev) => ({ ...prev, [s.id]: e.target.value }))}
+            />
 
-        <Link to="/eden" className="eden-back">cd ..</Link>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button className="admin-boton" disabled={procesando === s.id} onClick={() => aprobar(s)}>
+                Aprobar
+              </button>
+              <button className="admin-boton" disabled={procesando === s.id} onClick={() => rechazar(s)}>
+                Rechazar
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )

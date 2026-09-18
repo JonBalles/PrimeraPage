@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../../lib/supabaseClient'
-import './EdenForms.css'
+import './AdminUI.css'
 
 export function Login() {
   const [email, setEmail] = useState('')
@@ -28,17 +28,15 @@ export function Login() {
   }
 
   return (
-    <div className="eden-page">
-      <div className="eden-terminal">
-        <p className="eden-prompt">
-          <span className="eden-prompt__user">jon@eden</span>
-          <span className="eden-prompt__sep">:~/admin$</span> login
-        </p>
+    <div className="admin-page">
+      <div className="admin-box">
+        <h1 className="admin-title">Ingreso de administradores</h1>
 
-        <form className="eden-form" onSubmit={manejarSubmit}>
-          <label className="eden-campo">
-            <span>email</span>
+        <form className="admin-form" onSubmit={manejarSubmit}>
+          <label className="admin-field">
+            <span>Email</span>
             <input
+              className="admin-input"
               type="email"
               required
               value={email}
@@ -46,9 +44,10 @@ export function Login() {
             />
           </label>
 
-          <label className="eden-campo">
-            <span>contraseña</span>
+          <label className="admin-field">
+            <span>Contraseña</span>
             <input
+              className="admin-input"
               type="password"
               required
               value={password}
@@ -56,10 +55,10 @@ export function Login() {
             />
           </label>
 
-          {error && <p className="eden-error">{error}</p>}
+          {error && <p className="admin-error">{error}</p>}
 
-          <button className="eden-boton" type="submit" disabled={enviando}>
-            {enviando ? 'entrando...' : 'entrar'}
+          <button className="admin-boton" type="submit" disabled={enviando}>
+            {enviando ? 'Entrando…' : 'Entrar'}
           </button>
         </form>
       </div>

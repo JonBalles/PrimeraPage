@@ -56,6 +56,28 @@
     color: #f5df9a;
 }
 
+.eden-subheader__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eden-subheader__auth {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    background: transparent;
+    border: 1px solid rgba(212, 170, 72, 0.35);
+    border-radius: 8px;
+    color: #f5df9a;
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.eden-subheader__auth:hover {
+    background: rgba(212, 170, 72, 0.1);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .eden-subheader__title { animation: none; }
 }

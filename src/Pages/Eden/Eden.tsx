@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom'
 import EdenTitle from '../../Components/EdenTitle/EdenTitle'
 import EdenLink from '../../Components/EdenTitle/EdenLink'
+import { useAuth } from '../../lib/useAuth'
 import './Eden.css'
 
 const GRUPO_URL = 'https://chat.whatsapp.com/FheFi72VfmfL9i11Ig1ea8'
 
-export default function Eden() {
+export function Eden() {
+  const { esAdmin } = useAuth()
+
   return (
     <main className="home">
       <div className="ambient-light light-one" />
@@ -18,11 +22,15 @@ export default function Eden() {
         </p>
 
         <div className="eden-menu">
-          <EdenLink to="/eden/juegos" icon="🎮">Juegos</EdenLink>
+          <EdenLink to="/juegos" icon="🎮">Juegos</EdenLink>
           <EdenLink to="/eden/cumples" icon="🎂">Cumpleaños</EdenLink>
           <EdenLink to="/eden/libros" icon="📚">Préstamo de libros</EdenLink>
-          <EdenLink to={GRUPO_URL} icon="💬">Grupo de WhatsApp</EdenLink>
+          <EdenLink to={GRUPO_URL} icon="🌿✨"> Nuestro Jardín del Edén</EdenLink>
         </div>
+
+        <Link to={esAdmin ? '/eden/admin/panel' : '/eden/admin'} className="eden-admin-link">
+          {esAdmin ? 'Panel de admin' : 'Admin'}
+        </Link>
       </section>
 
       <footer className="eden-footer">Jardín del Edén</footer>

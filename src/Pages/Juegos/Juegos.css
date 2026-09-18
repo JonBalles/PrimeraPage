@@ -1,0 +1,80 @@
+.juegos-page {
+    min-height: 100vh;
+    background: #14110d;
+    color: #ede4d3;
+    font-family: system-ui, sans-serif;
+    padding: 60px 20px;
+}
+
+.juegos-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.juegos-title {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    color: #d99323;
+    font-size: 2rem;
+    margin: 0 0 4px;
+}
+
+.juegos-subtitle {
+    color: #93876f;
+    margin: 0 0 32px;
+}
+
+.juegos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.juego-card {
+    border: 1px solid #332a1d;
+    border-radius: 10px;
+    padding: 20px;
+    background: #1c1812;
+}
+
+.juego-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.juego-card__header h2 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.juego-estado {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #d99323;
+    border: 1px solid rgba(217, 147, 35, 0.4);
+    border-radius: 20px;
+    padding: 3px 10px;
+    white-space: nowrap;
+}
+
+.juego-card p {
+    color: #b7ab95;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.juegos-back {
+    display: inline-block;
+    margin-top: 32px;
+    color: #93876f;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.juegos-back:hover {
+    color: #d99323;
+}

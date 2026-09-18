@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { supabase } from '../../../../lib/supabaseClient'
-import { useAuth } from '../../../../lib/useAuth'
-import { EdenHeader } from '../../../../Components/EdenTitle/EdenHeader'
+import { supabase } from '../../../lib/supabaseClient'
+import { useAuth } from '../../../lib/useAuth'
+import { EdenHeader } from '../../../Components/EdenTitle/EdenHeader'
 import { ConfigModal } from './ConfigModal'
 import {
   MESES,

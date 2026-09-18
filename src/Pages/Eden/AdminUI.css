@@ -1,0 +1,127 @@
+.admin-page {
+    min-height: 100vh;
+    background: #05050a;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.admin-box {
+    width: 100%;
+    max-width: 480px;
+}
+
+.admin-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+    color: #f5df9a;
+    font-size: 1.4rem;
+    margin: 0 0 20px;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.admin-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.admin-input {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 170, 72, 0.3);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.admin-input:focus {
+    outline: none;
+    border-color: rgba(240, 205, 115, 0.75);
+}
+
+.admin-error {
+    color: #e08a8a;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.admin-boton {
+    align-self: flex-start;
+    background: rgba(212, 170, 72, 0.12);
+    border: 1px solid rgba(212, 170, 72, 0.4);
+    color: #f5df9a;
+    border-radius: 20px;
+    padding: 9px 22px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.admin-boton:hover:not(:disabled) {
+    background: rgba(212, 170, 72, 0.22);
+}
+
+.admin-boton:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.admin-nav {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.admin-back {
+    color: rgba(255, 255, 255, 0.45);
+    text-decoration: none;
+    font-size: 0.85rem;
+    border: 1px solid rgba(212, 170, 72, 0.25);
+    border-radius: 16px;
+    padding: 5px 14px;
+}
+
+.admin-back:hover {
+    color: #f5df9a;
+    border-color: rgba(212, 170, 72, 0.5);
+}
+
+.admin-entrada {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-entrada__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.admin-entrada__nombre {
+    font-weight: 600;
+    color: #f5df9a;
+}
+
+.admin-entrada__desc {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.5);
+}

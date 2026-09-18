@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Eden from "./Eden";
+import { Eden } from "./Eden";
 
 function Placeholder({ title }: { title: string }) {
   return (

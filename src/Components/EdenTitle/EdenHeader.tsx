@@ -7,6 +7,7 @@ const OPCIONES = [
   { valor: '/eden', etiqueta: '🏠 El Edén' },
   { valor: '/eden/cumples', etiqueta: '🎂 Cumpleaños' },
   { valor: '/eden/libros', etiqueta: '📚 Libros' },
+  { valor: '/eden/fotos', etiqueta: '📷 Fotos' },
 ]
 
 export function EdenHeader() {

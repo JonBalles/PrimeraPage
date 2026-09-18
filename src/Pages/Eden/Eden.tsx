@@ -25,7 +25,8 @@ export function Eden() {
           <EdenLink to="/juegos" icon="🎮">Juegos</EdenLink>
           <EdenLink to="/eden/cumples" icon="🎂">Cumpleaños</EdenLink>
           <EdenLink to="/eden/libros" icon="📚">Préstamo de libros</EdenLink>
-          <EdenLink to={GRUPO_URL} icon="🌿✨"> Nuestro Jardín del Edén</EdenLink>
+          <EdenLink to="/eden/fotos" icon="📷">Fotos</EdenLink>
+          <EdenLink to={GRUPO_URL} icon="💬">Grupo de WhatsApp</EdenLink>
         </div>
 
         <Link to={esAdmin ? '/eden/admin/panel' : '/eden/admin'} className="eden-admin-link">

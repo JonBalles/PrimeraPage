@@ -1,10 +1,10 @@
 ## 🚀 Próximas Tareas
-- [ ] Seccion de fotos
+- [ ] Seccion de armar tu plan
 - [ ] Estilizar pages de juegos
 - [ ] Combinar descripcion de portfolio con github
 
 ## ⏳ En Progreso
-- [ / ] 
+- [ / ] Seccion de fotos
 - [ / ] Empezar sistema de prestamo de libros
 
 ## ✅ Terminado

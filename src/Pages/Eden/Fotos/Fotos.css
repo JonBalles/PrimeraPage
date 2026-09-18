@@ -1,0 +1,121 @@
+.fotos-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(71, 36, 86, 0.25), transparent 40%),
+        #05050a;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 40px 20px 80px;
+}
+
+.fotos-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fotos-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.fotos-header h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    background: linear-gradient(110deg, #8d6b2f, #f8df8a, #fff1a8, #b58a3b, #f4d477);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0 0 6px;
+}
+
+.fotos-header p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.fotos-upload {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.fotos-upload input[type='file'] {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+.fotos-subiendo {
+    color: #f5df9a;
+    font-size: 0.85rem;
+}
+
+.fotos-error {
+    color: #e08a8a;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+}
+
+.fotos-vacio {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 30px 0;
+}
+
+.fotos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+.foto-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 170, 72, 0.2);
+    aspect-ratio: 1 / 1;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-item__borrar {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.foto-item__borrar:hover {
+    background: rgba(200, 40, 40, 0.8);
+}
+
+.fotos-back {
+    display: inline-block;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.fotos-back:hover {
+    color: #f5df9a;
+}

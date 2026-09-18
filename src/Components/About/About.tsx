@@ -1,17 +1,13 @@
+import { Link } from "react-router-dom";
 import "./About.css";
 
 export function About() {
     return (
         <section id="about" className="section about">
-
-            <h2 className="section-title">
-                Sobre mí
-            </h2>
+            <h2 className="section-title">Sobre mí</h2>
 
             <div className="about__content">
-
                 <div className="about__text">
-
                     <p>
                         Soy <strong>Jonatan Ballestero</strong>, desarrollador
                         Full Stack y técnico de soporte IT de Buenos Aires,
@@ -32,51 +28,32 @@ export function About() {
                     </p>
 
                     <p>
-                        También soy creador y administrador de <strong>El Edén</strong>,
+                        También soy creador y administrador de{" "}
+                        <Link to="/eden" className="about__eden-link">El Edén</Link>,
                         una comunidad donde organizo encuentros, actividades y
                         proyectos para conectar personas.
                     </p>
-
                 </div>
 
                 <div className="about__info">
-
-                    <div className="info-card">
-                        <span>📍</span>
-                        <div>
-                            <h3>Ubicación</h3>
-                            <p>Buenos Aires, Argentina</p>
-                        </div>
+                    <div className="info-row">
+                        <span className="info-row__key">ubicación</span>
+                        <span className="info-row__val">Buenos Aires, Argentina</span>
                     </div>
-
-                    <div className="info-card">
-                        <span>💼</span>
-                        <div>
-                            <h3>Profesión</h3>
-                            <p>Full Stack Developer</p>
-                        </div>
+                    <div className="info-row">
+                        <span className="info-row__key">profesión</span>
+                        <span className="info-row__val">Full Stack Developer</span>
                     </div>
-
-                    <div className="info-card">
-                        <span>💻</span>
-                        <div>
-                            <h3>Especialidad</h3>
-                            <p>Automatización & Apps Web</p>
-                        </div>
+                    <div className="info-row">
+                        <span className="info-row__key">especialidad</span>
+                        <span className="info-row__val">Automatización & apps web</span>
                     </div>
-
-                    <div className="info-card">
-                        <span>🎯</span>
-                        <div>
-                            <h3>Objetivo</h3>
-                            <p>Crear soluciones útiles e innovadoras.</p>
-                        </div>
+                    <div className="info-row">
+                        <span className="info-row__key">objetivo</span>
+                        <span className="info-row__val">Crear soluciones útiles e innovadoras</span>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
     );
 }

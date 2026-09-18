@@ -14,6 +14,12 @@ const PROYECTOS = [
       'Historia colaborativa por turnos entre varios jugadores, con modo de rotación global. Migrando de Google Apps Script a Supabase.',
     estado: 'En migración',
   },
+    {
+    nombre: 'Super Pancho',
+    descripcion:
+      'Juego de plataformas 2D con físicas, niveles y enemigos.',
+    estado: 'En desarrollo',
+  },
 ]
 
 export function Juegos() {

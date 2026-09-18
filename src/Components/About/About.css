@@ -1,117 +1,61 @@
-.section-title{
-
-    font-size:2.5rem;
-
-    margin-bottom:60px;
-
-    text-align:center;
-
-    color:white;
-
+.about__content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
 }
 
-.about__content{
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr;
-
-    gap:50px;
-
-    align-items:start;
-
+.about__text p {
+    line-height: 1.8;
+    color: var(--text-dim);
+    margin: 0 0 16px;
 }
 
-.about__text{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:25px;
-
+.about__text strong {
+    color: var(--text);
 }
 
-.about__text p{
-
-    color:#94a3b8;
-
-    line-height:1.9;
-
-    font-size:1.1rem;
-
+.about__eden-link {
+    color: var(--amber);
+    text-decoration: none;
+    border-bottom: 1px solid var(--amber-dim);
 }
 
-.about__text strong{
-
-    color:white;
-
+.about__eden-link:hover {
+    border-bottom-color: var(--amber);
 }
 
-.about__info{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
+.about__info {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--bg-raised);
+    padding: 6px 20px;
 }
 
-.info-card{
-
-    display:flex;
-
-    gap:18px;
-
-    align-items:flex-start;
-
-    background:#162235;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:14px;
-
-    padding:20px;
-
-    transition:.25s;
-
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.9rem;
 }
 
-.info-card:hover{
-
-    transform:translateY(-5px);
-
-    border-color:#38bdf8;
-
+.info-row:last-child {
+    border-bottom: none;
 }
 
-.info-card span{
-
-    font-size:2rem;
-
+.info-row__key {
+    font-family: var(--mono);
+    color: var(--text-dim);
 }
 
-.info-card h3{
-
-    color:white;
-
-    margin-bottom:6px;
-
+.info-row__val {
+    color: var(--text);
+    text-align: right;
 }
 
-.info-card p{
-
-    color:#94a3b8;
-
-}
-
-@media(max-width:900px){
-
-.about__content{
-
-grid-template-columns:1fr;
-
-}
-
+@media (max-width: 640px) {
+    .about__content {
+        grid-template-columns: 1fr;
+    }
 }

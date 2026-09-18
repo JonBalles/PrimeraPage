@@ -3,18 +3,11 @@ import "./Presentation.css";
 export function Presentation() {
     return (
         <section className="presentation">
+            <div className="presentation__avatar">JB</div>
 
-            <div className="presentation__avatar">
-                <span>JB</span>
-            </div>
+            <p className="presentation__welcome">hola, soy</p>
 
-            <p className="presentation__welcome">
-                Hola, soy
-            </p>
-
-            <h1 className="presentation__title">
-                Jonatan Ballestero
-            </h1>
+            <h1 className="presentation__title">Jonatan Ballestero</h1>
 
             <h2 className="presentation__subtitle">
                 Full Stack Developer · Google Apps Script · IT Support
@@ -28,23 +21,9 @@ export function Presentation() {
             </p>
 
             <div className="presentation__buttons">
-
-                <a
-                    href="#projects"
-                    className="button button--primary"
-                >
-                    Ver proyectos
-                </a>
-
-                <a
-                    href="#contact"
-                    className="button button--secondary"
-                >
-                    Contactarme
-                </a>
-
+                <a href="#projects" className="button button--primary">Ver proyectos</a>
+                <a href="#contact" className="button button--secondary">Contactarme</a>
             </div>
-
         </section>
     );
 }

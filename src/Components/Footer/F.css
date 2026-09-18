@@ -1,95 +1,65 @@
-.footer{
-
-    margin-top:80px;
-
-    border-top:1px solid var(--border-color);
-
-    background:rgba(0,0,0,.15);
-
-    backdrop-filter:blur(15px);
-
+.footer {
+    margin-top: 60px;
+    border-top: 1px solid var(--line);
+    background: var(--bg-raised);
 }
 
-.footer__content{
-
-    width:min(var(--container),92%);
-
-    margin:auto;
-
-    padding:50px 0;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:50px;
-
-    flex-wrap:wrap;
-
+.footer__content {
+    width: min(var(--container), 92%);
+    margin: auto;
+    padding: 50px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
-.footer__content h3{
-
-    margin-bottom:15px;
-
+.footer__content h3 {
+    font-family: var(--mono);
+    color: var(--amber);
+    margin-bottom: 12px;
 }
 
-.footer__content p{
-
-    max-width:420px;
-
-    color:var(--color-text-secondary);
-
-    line-height:1.7;
-
+.footer__content p {
+    max-width: 420px;
+    color: var(--text-dim);
+    line-height: 1.7;
 }
 
-.footer__links{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:12px;
-
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.footer__links a{
-
-    color:var(--color-text-secondary);
-
-    text-decoration:none;
-
-    transition:var(--transition);
-
+.footer__links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.15s;
 }
 
-.footer__links a:hover{
-
-    color:var(--color-primary);
-
+.footer__links a:hover {
+    color: var(--amber);
 }
 
-.footer__bottom{
-
-    border-top:1px solid var(--border-color);
-
-    text-align:center;
-
-    padding:20px;
-
-    color:var(--color-text-secondary);
-
-    font-size:.9rem;
-
+.footer__ai-note {
+    width: min(var(--container), 92%);
+    margin: auto;
+    padding: 0 0 20px;
+    color: var(--text-dim);
+    font-size: 0.8rem;
 }
 
-@media(max-width:768px){
-
-.footer__content{
-
-flex-direction:column;
-
+.footer__bottom {
+    border-top: 1px solid var(--line);
+    text-align: center;
+    padding: 18px;
+    color: var(--text-dim);
+    font-size: 0.85rem;
 }
 
+@media (max-width: 768px) {
+    .footer__content {
+        flex-direction: column;
+    }
 }

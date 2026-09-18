@@ -1,12 +1,10 @@
 ## 🚀 Próximas Tareas
-- [ ] Arreglar rutas sin vista
 - [ ] Seccion de fotos
-- [ ] Juegos como proyectos de JonFix. No del Eden
 - [ ] Estilizar pages de juegos
-- [ ] 
+- [ ] Combinar descripcion de portfolio con github
 
 ## ⏳ En Progreso
-- [ / ] Loguin y permanencia de admin
+- [ / ] 
 - [ / ] Empezar sistema de prestamo de libros
 
 ## ✅ Terminado
@@ -14,3 +12,7 @@
 - [x] Combinar "home" y "eden" para tener una landing
 - [x] Agregar link a Libros
 - [x] Traer calendario real a la app
+- [x] Loguin y permanencia de admin
+- [x] Juegos como proyectos de JonFix. No del Eden
+- [x] Arreglar rutas sin vista
+

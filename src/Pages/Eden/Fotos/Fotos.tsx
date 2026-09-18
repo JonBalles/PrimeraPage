@@ -5,7 +5,6 @@ import { useAuth } from '../../../lib/useAuth'
 import { EdenHeader } from '../../../Components/EdenTitle/EdenHeader'
 import './Fotos.css'
 
-// TODO: reemplazar por la URL real del Worker una vez deployado
 const WORKER_URL = 'https://eden-fotos-worker.jonatan-a-ballestero.workers.dev'
 
 interface Foto {
@@ -62,7 +61,8 @@ export function Fotos() {
       })
 
       if (!resp.ok) {
-        setError('No se pudo subir la foto.')
+        const motivo = await resp.text()
+        setError(`No se pudo subir la foto (${resp.status}): ${motivo}`)
         setSubiendo(false)
         return
       }

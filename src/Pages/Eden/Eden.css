@@ -105,7 +105,7 @@ body {
 .eden-title {
   position: relative;
 
-  margin: 0;
+  margin: 10px 0 0;
 
   font-family: "Cinzel", serif;
   font-size: clamp(3.5rem, 13vw, 7rem);
@@ -167,7 +167,7 @@ body {
 
   padding: 2px;
 
-  animation: border-shine 4s linear infinite;
+  animation: border-shine 6s linear infinite;
 
   pointer-events: none;
 }
@@ -251,8 +251,8 @@ body {
 ----------------------------- */
 
 .eden-footer {
-  position: absolute;
-  bottom: 25px;
+  position: static;
+  margin-top: 10px;
 
   color: rgba(255, 255, 255, 0.25);
 
@@ -261,12 +261,27 @@ body {
   text-transform: uppercase;
 }
 
+.eden-footer__by {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+
+.eden-footer__by:hover {
+  color: #f5df9a;
+}
+
+@media (min-width: 769px) {
+  .home {
+    padding: 16px;
+  }
+}
+
 /* -----------------------------
    Link de admin
 ----------------------------- */
 
 .eden-admin-link {
-  margin-top: 24px;
+  margin-top: 2px;
 
   color: rgba(255, 255, 255, 0.3);
   font-size: 0.75rem;
